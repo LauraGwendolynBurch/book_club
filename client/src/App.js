@@ -1,21 +1,35 @@
-import React, { Component } from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import React from "react";
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+import GlobalNavbar from "./components/GlobalNavbar";
+import 'bootstrap/scss/bootstrap.scss';
+
+// import "bootstrap/scss/_variables.scss"
+// import "bootstrap/scss/_mixins.scss"
+// import "bootstrap/scss/_functions.scss"
+// import "bootstrap/scss/_utilities.scss"
+// import "bootstrap/scss/bootstrap.scss"
+// import "bootstrap/scss/bootstrap-reboot.scss"
+// import "bootstrap/scss/bootstrap-grid.scss"
+// import "bootstrap/scss/_navbar.scss"
+
+
+function App() {
+
+  return (
+    <div>
+      <GlobalNavbar />
+      <div className="container">
+        <div className="row">
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
+        <div className="row">
+          <p className="row">
+            To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+        </div>
       </div>
-    );
-  }
+    </div>
+  );
 }
+
 
 export default App;
