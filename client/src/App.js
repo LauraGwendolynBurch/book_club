@@ -4,6 +4,7 @@ import "./main.sass";
 import GlobalNavbar from "./components/GlobalNavbar";
 import Header from "./components/Header";
 import SearchForm from "./components/SearchForm";
+import Results from "./components/Results";
 import { Container } from "react-bootstrap";
 
 
@@ -25,8 +26,9 @@ function App() {
       <Container className="py-5">
       <Header />
       <SearchForm />
+      <Results />
       </Container>
-    </div>
+     </div>
   );
 }
 
