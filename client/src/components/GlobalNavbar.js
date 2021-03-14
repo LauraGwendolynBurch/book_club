@@ -7,7 +7,7 @@ function GlobalNavbar() {
             <Navbar.Brand href="#home">Book Club</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="mr-auto">
+                <Nav className="mr-auto primary">
                     <Nav.Link href="/">Search</Nav.Link>
                     <Nav.Link href="/saved">Saved</Nav.Link>    
                 </Nav>
