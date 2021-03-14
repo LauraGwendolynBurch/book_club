@@ -12,9 +12,8 @@ function SearchForm() {
         event.preventDefault();
         API.getBooks(bookInput.current.value)
             .then((res) => {
-
             console.log(res);
-            
+        
         });
     }
 
@@ -27,7 +26,7 @@ function SearchForm() {
                     <Form.Label>Book Title</Form.Label>
                     <Form.Control ref={bookInput} type="text" placeholder="Enter book title here" />
                 </Form.Group>
-                <Button onClick={handleSubmit} varitant="primary" type="submit">
+                <Button onClick={handleSubmit} varitant="dark" type="submit">
                     Search
                 </Button>
             </Form>
