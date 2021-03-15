@@ -12,7 +12,7 @@ function Results({ books }) {
             {books.map(book => {
                 return (
                     <Card key={book.id}>
-                        <Card.Img variant="top" src={book.volumeInfo.readingModes.image} />
+                        <Card.Img variant="top" src={book.volumeInfo.imageLinks.thumbnail} style={{width:"200px", height:"250px"}}/>
                         <Card.Body>
                             <Card.Title>{book.volumeInfo.title}</Card.Title>
                             <h5 >{book.volumeInfo.authors}</h5>
