@@ -3,22 +3,28 @@ import { Button, Card } from "react-bootstrap";
 
 
 
-function Results() {
+function Results({ books }) {
+
+
 
     return (
-        <Card >
-            <Card.Img variant="top" src="holder.js/100px180" />
-            <Card.Body>
-                <Card.Title>Title</Card.Title>
-                <h5>Author</h5>
-                <Card.Text>
-                    Some quick example text about book
-                </Card.Text>
-                <Button variant="primary">Link to book</Button>
-                <br />
-                <Button variant="primary">Save</Button>
-            </Card.Body>
-        </Card>
+        <div>
+            {books.map(book => {
+                return (
+                    <Card key={book.id}>
+                        <Card.Img variant="top" src={book.volumeInfo.readingModes.image} />
+                        <Card.Body>
+                            <Card.Title>{book.volumeInfo.title}</Card.Title>
+                            <h5 >{book.volumeInfo.authors}</h5>
+                            <Card.Text>{book.volumeInfo.description}</Card.Text>
+                            <Button ><a href={book.volumeInfo.previewLink} className="text-white">Link to book</a></Button>
+                            <br />
+                            <Button variant="primary">Save</Button>
+                        </Card.Body>
+                    </Card>
+                )
+            })}
+        </div>
     )
 
 
